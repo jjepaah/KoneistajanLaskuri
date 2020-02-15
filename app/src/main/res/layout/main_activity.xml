@@ -75,5 +75,6 @@
         android:onClick="github"
         android:textColor="@color/design_default_color_primary_dark"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:focusable="true" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,10 +16,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        if (actionBar != null) {
+            actionBar.hide();
+        }
         setContentView(R.layout.main_activity);
         TextView version = findViewById(R.id.versionNbr);
-        version.setText("v" + BuildConfig.VERSION_NAME);
+        version.setText(getString(R.string.version_display, BuildConfig.VERSION_NAME));
     }
 
     public void nopeus(View view) {

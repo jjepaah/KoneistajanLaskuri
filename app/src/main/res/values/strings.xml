@@ -14,4 +14,5 @@
     <string name="drill_diameter">Poran halkaisija</string>
     <string name="num_of_teeth">Aurinkopyörän hampaat</string>
     <string name="keyway_field">Kiilauran leveys</string>
+    <string name="version_display" translatable="false">v%1$s</string>
 </resources>
