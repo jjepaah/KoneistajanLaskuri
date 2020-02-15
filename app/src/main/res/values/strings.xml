@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Koneistajan Laskuri</string>
+    <string-array name="numOfTeeths">
+        <item>100/160</item>
+        <item>250/500</item>
+        <item>700</item>
+        <item>1000/1600</item>
+    </string-array>
+</resources>
