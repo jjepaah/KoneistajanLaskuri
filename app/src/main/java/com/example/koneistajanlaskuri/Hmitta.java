@@ -11,14 +11,14 @@ import java.text.DecimalFormat;
 
 import static java.lang.Math.pow;
 
-public class HmittaLaskuri extends AppCompatActivity {
+public class Hmitta extends AppCompatActivity {
 
     private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hmitta_laskuri);
+        setContentView(R.layout.hmitta);
     }
 
     public void hmitta(View view) {

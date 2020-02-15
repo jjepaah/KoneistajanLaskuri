@@ -3,7 +3,6 @@ package com.example.koneistajanlaskuri;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -11,11 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.text.DecimalFormat;
 
-public class planeettaTunnistus extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Valitys extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String valittu = "";
     private static DecimalFormat df2 = new DecimalFormat("#.##");
@@ -23,7 +20,7 @@ public class planeettaTunnistus extends AppCompatActivity implements AdapterView
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_planeetta_tunnistus);
+        setContentView(R.layout.valitys);
 
         Spinner koko = findViewById(R.id.koko);
         koko.setOnItemSelectedListener(this);
