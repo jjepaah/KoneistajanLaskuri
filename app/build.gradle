@@ -7,9 +7,9 @@ android {
         applicationId "com.example.koneistajanlaskuri"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 3
+        versionCode 4
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        versionName = '0.12'
+        versionName = '0.13'
     }
     buildTypes {
         release {
