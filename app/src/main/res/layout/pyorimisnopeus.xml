@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".Pyorimisnopeus" >
 
     <TextView
         android:id="@+id/tulos"
@@ -29,7 +29,7 @@
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="300dp"
         android:ems="10"
-        android:hint="Poran halkaisija"
+        android:hint="@string/drill_diameter"
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="laskeNopeus"
-        android:text="Laske"
+        android:text="@string/calc_button"
         app:layout_constraintEnd_toEndOf="@+id/halkaisija"
         app:layout_constraintStart_toStartOf="@+id/halkaisija"
         app:layout_constraintTop_toBottomOf="@+id/halkaisija" />
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Pyörimisnopeuden laskuri"
+        android:text="@string/rpm_button"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -14,7 +14,7 @@ import java.text.DecimalFormat;
 
 public class Valitys extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-    String valittu = "";
+    private String valittu = "";
     private static DecimalFormat df2 = new DecimalFormat("#.##");
 
     @Override

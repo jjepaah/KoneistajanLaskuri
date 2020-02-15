@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Machinists Calculator</string>
+    <string name="hdim_button">H-dimension</string>
+    <string name="calc_button">Calculate</string>
+    <string name="drill_diameter">Drill diameter</string>
+    <string name="hole_diameter">Hole diameter</string>
+    <string name="ratio_button">Ratio</string>
+    <string name="rpm_button">Rotational speed</string>
+    <string name="num_of_teeth">Number of teeth</string>
+    <string name="keyway_field">Keyway width</string>
+</resources>

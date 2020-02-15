@@ -6,4 +6,12 @@
         <item>700</item>
         <item>1000/1600</item>
     </string-array>
+    <string name="rpm_button">Pyörimisnopeus</string>
+    <string name="hdim_button">H-mitta</string>
+    <string name="ratio_button">Välitys</string>
+    <string name="calc_button">Laske</string>
+    <string name="hole_diameter">Reijän halkaisija</string>
+    <string name="drill_diameter">Poran halkaisija</string>
+    <string name="num_of_teeth">Aurinkopyörän hampaat</string>
+    <string name="keyway_field">Kiilauran leveys</string>
 </resources>

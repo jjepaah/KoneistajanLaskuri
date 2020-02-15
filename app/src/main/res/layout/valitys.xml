@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".planeettaTunnistus">
+    tools:context=".Valitys">
 
     <TextView
         android:id="@+id/textView4"
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:text="Välityslaskuri"
+        android:text="@string/ratio_button"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Aurinkopyörän hampaat"
+        android:hint="@string/num_of_teeth"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="@+id/koko"
         app:layout_constraintHorizontal_bias="0.0"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="laskuri"
-        android:text="Laske"
+        android:text="@string/calc_button"
         app:layout_constraintEnd_toEndOf="@+id/aurinkoP"
         app:layout_constraintStart_toStartOf="@+id/aurinkoP"
         app:layout_constraintTop_toBottomOf="@+id/aurinkoP" />
