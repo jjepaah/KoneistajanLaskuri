@@ -3,14 +3,13 @@ package com.example.koneistajanlaskuri;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
-
-import static java.lang.String.format;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //Shows version number on app
+        TextView versionNbr = findViewById(R.id.versionNbr);
+        String verName = BuildConfig.VERSION_NAME;
+        versionNbr.setText("v" + verName);
     }
 
     public void laskeNopeus(View view) {
@@ -40,5 +44,15 @@ public class MainActivity extends AppCompatActivity {
     public void som(View view) {
         Intent intent = new Intent(this, planeettaTunnistus.class);
         startActivity(intent);
+    }
+
+    public void github(View view) {
+        goToUrl("https://github.com/jjepaah/KoneistajanLaskuri/releases");
+    }
+
+    public void goToUrl(String url) {
+        Uri uriUrl = Uri.parse(url);
+        Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+        startActivity(launchBrowser);
     }
 }
