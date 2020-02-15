@@ -30,10 +30,10 @@ public class Hmitta extends AppCompatActivity {
         Double l = Double.parseDouble(kiilaura.getText().toString()) / 2;
 
         if (r < l) {
-            tulos.setText("Virhe");
+            tulos.setText(getString(R.string.error));
         } else {
             Double hMitta = r - Math.sqrt(pow(r,2) - pow(l,2));
-            tulos.setText(df2.format(hMitta) + " mm");
+            tulos.setText(getString(R.string.hdim_total, df2.format(hMitta)));
         }
     }
 }

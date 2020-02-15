@@ -35,28 +35,36 @@ public class Valitys extends AppCompatActivity implements AdapterView.OnItemSele
 
         //Todo: Lisää loput koot ja muuta hammasluvut oikeiksi
 
-        if (koko.equals("100/160")) {
-            ulkokeha = 69;
-        } else if (koko.equals("250/500")) {
-            ulkokeha = 65;
-        } else if (koko.equals("700")) {
-            ulkokeha = 75;
-        } else if (koko.equals("1000/1600")) {
-            ulkokeha = 78;
-        } else {
-            ulkokeha = 0;
+        switch (koko) {
+            case "100/160":
+                ulkokeha = 69;
+                break;
+            case "250/500":
+                ulkokeha = 65;
+                break;
+            case "700":
+                ulkokeha = 75;
+                break;
+            case "1000/1600":
+                ulkokeha = 78;
+                break;
+            default:
+                ulkokeha = 0;
         }
-
-        return df2.format(ulkokeha / aurinkoP + 1);
+        if (ulkokeha != 0) {
+            return df2.format(ulkokeha / aurinkoP + 1);
+        } else {
+            return "Virhe";
+        }
     }
 
     public void laskuri (View view) {
         TextView tulos = findViewById(R.id.testi);
         EditText aurinkoP = findViewById(R.id.aurinkoP);
 
-        Double hampaat = Double.parseDouble(aurinkoP.getText().toString());
+        double hampaat = Double.parseDouble(aurinkoP.getText().toString());
 
-        tulos.setText("i = " + laskeValitys(valittu, hampaat));
+        tulos.setText(getString(R.string.ratio_total, laskeValitys(valittu, hampaat)));
     }
 
     @Override

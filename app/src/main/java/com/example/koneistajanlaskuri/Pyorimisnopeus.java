@@ -27,6 +27,6 @@ public class Pyorimisnopeus extends AppCompatActivity {
         double t = 15000 / (h * Math.PI);
         String output = df2.format(t);
 
-        tulos.setText(output + " rpm");
+        tulos.setText(getString(R.string.rpm_total, output));
     }
 }
