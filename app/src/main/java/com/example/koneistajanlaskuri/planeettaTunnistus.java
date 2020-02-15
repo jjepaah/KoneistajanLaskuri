@@ -36,6 +36,8 @@ public class planeettaTunnistus extends AppCompatActivity implements AdapterView
     public String laskeValitys (String koko, double aurinkoP) {
         double ulkokeha;
 
+        //Todo: Lisää loput koot ja muuta hammasluvut oikeiksi
+
         if (koko.equals("100/160")) {
             ulkokeha = 69;
         } else if (koko.equals("250/500")) {
