@@ -25,15 +25,21 @@ public class Hmitta extends AppCompatActivity {
         TextView tulos = findViewById(R.id.tulos);
         EditText halkaisija = findViewById(R.id.halkaisija);
         EditText kiilaura = findViewById(R.id.kiilaura);
+        double r;   //Radius
+        double l;   //Half chord length
 
-        Double r = Double.parseDouble(halkaisija.getText().toString()) / 2;
-        Double l = Double.parseDouble(kiilaura.getText().toString()) / 2;
+        if (!(halkaisija.getText().toString().isEmpty() || kiilaura.getText().toString().isEmpty())) {
+            r = Double.parseDouble(halkaisija.getText().toString()) / 2;
+            l = Double.parseDouble(kiilaura.getText().toString()) / 2;
 
-        if (r < l) {
-            tulos.setText(getString(R.string.error));
+            if (r < l) {
+                tulos.setText(getString(R.string.error));
+            } else {
+                Double hMitta = r - Math.sqrt(pow(r,2) - pow(l,2));
+                tulos.setText(getString(R.string.hdim_total, df2.format(hMitta)));
+            }
         } else {
-            Double hMitta = r - Math.sqrt(pow(r,2) - pow(l,2));
-            tulos.setText(getString(R.string.hdim_total, df2.format(hMitta)));
+            tulos.setText(getString(R.string.error));
         }
     }
 }

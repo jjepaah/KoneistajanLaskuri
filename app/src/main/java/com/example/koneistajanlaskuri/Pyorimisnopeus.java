@@ -23,10 +23,13 @@ public class Pyorimisnopeus extends AppCompatActivity {
         EditText halkaisija = findViewById(R.id.halkaisija);
         TextView tulos = findViewById(R.id.tulos);
 
-        double h = Double.parseDouble(halkaisija.getText().toString());
-        double t = 15000 / (h * Math.PI);
-        String output = df2.format(t);
-
-        tulos.setText(getString(R.string.rpm_total, output));
+        if (!halkaisija.getText().toString().isEmpty()) {
+            double h = Double.parseDouble(halkaisija.getText().toString());
+            double t = 15000 / (h * Math.PI);
+            String output = df2.format(t);
+            tulos.setText(getString(R.string.rpm_total, output));
+        } else {
+            tulos.setText(getString(R.string.error));
+        }
     }
 }

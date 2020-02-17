@@ -3,6 +3,7 @@ package com.example.koneistajanlaskuri;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -33,38 +34,39 @@ public class Valitys extends AppCompatActivity implements AdapterView.OnItemSele
     public String laskeValitys (String koko, double aurinkoP) {
         double ulkokeha;
 
-        //Todo: Lisää loput koot ja muuta hammasluvut oikeiksi
-
         switch (koko) {
             case "100/160":
                 ulkokeha = 69;
                 break;
             case "250/500":
-                ulkokeha = 65;
-                break;
-            case "700":
                 ulkokeha = 75;
                 break;
+            case "700":
+                ulkokeha = 72;
+                break;
             case "1000/1600":
-                ulkokeha = 78;
+                ulkokeha = 69;
+                break;
+            case "2500/3500":
+                ulkokeha = 63;
                 break;
             default:
-                ulkokeha = 0;
+                return "Virhe";
         }
-        if (ulkokeha != 0) {
-            return df2.format(ulkokeha / aurinkoP + 1);
-        } else {
-            return "Virhe";
-        }
+
+        return df2.format(ulkokeha / aurinkoP + 1);
     }
 
     public void laskuri (View view) {
         TextView tulos = findViewById(R.id.testi);
         EditText aurinkoP = findViewById(R.id.aurinkoP);
 
-        double hampaat = Double.parseDouble(aurinkoP.getText().toString());
-
-        tulos.setText(getString(R.string.ratio_total, laskeValitys(valittu, hampaat)));
+        if (!aurinkoP.getText().toString().isEmpty()) {
+            double hampaat = Double.parseDouble(aurinkoP.getText().toString());
+            tulos.setText(getString(R.string.ratio_total, laskeValitys(valittu, hampaat)));
+        } else {
+            tulos.setText(getString(R.string.error));
+        }
     }
 
     @Override

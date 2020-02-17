@@ -5,6 +5,7 @@
         <item>250/500</item>
         <item>700</item>
         <item>1000/1600</item>
+        <item>2500/3500</item>
     </string-array>
     <string name="rpm_button">Pyörimisnopeus</string>
     <string name="hdim_button">H-mitta</string>
