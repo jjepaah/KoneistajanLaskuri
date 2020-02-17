@@ -5,10 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.github.javiersantos.appupdater.AppUpdater;
+import com.github.javiersantos.appupdater.enums.Display;
+import com.github.javiersantos.appupdater.enums.Duration;
+import com.github.javiersantos.appupdater.enums.UpdateFrom;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,6 +26,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         TextView version = findViewById(R.id.versionNbr);
         version.setText(getString(R.string.version_display, BuildConfig.VERSION_NAME));
+
+        new AppUpdater(this)
+                .setDisplay(Display.SNACKBAR)
+                .setDuration(Duration.INDEFINITE)
+                .setUpdateFrom(UpdateFrom.GITHUB)
+                .setGitHubUserAndRepo("jjepaah", "KoneistajanLaskuri")
+                .start();
     }
 
     public void nopeus(View view) {
