@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".Valitys">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_light"
         android:text="@string/ratio_button"
+        android:textColor="@color/secondary_text"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -54,20 +57,23 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/num_of_teeth"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="@+id/koko"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/koko"
-        app:layout_constraintTop_toBottomOf="@+id/koko"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toBottomOf="@+id/koko" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/roboto_light"
         android:onClick="laskuri"
         android:text="@string/calc_button"
+        android:textColor="@color/secondary_text"
         app:layout_constraintEnd_toEndOf="@+id/aurinkoP"
         app:layout_constraintStart_toStartOf="@+id/aurinkoP"
         app:layout_constraintTop_toBottomOf="@+id/aurinkoP" />

@@ -11,7 +11,7 @@
     <string name="hdim_button">H-mitta</string>
     <string name="ratio_button">Välitys</string>
     <string name="calc_button">Laske</string>
-    <string name="hole_diameter">Reijän halkaisija</string>
+    <string name="hole_diameter">Reiän halkaisija</string>
     <string name="drill_diameter">Poran halkaisija</string>
     <string name="num_of_teeth">Aurinkopyörän hampaat</string>
     <string name="keyway_field">Kiilauran leveys</string>
@@ -20,4 +20,5 @@
     <string name="ratio_total" translatable="false">i = %1$s</string>
     <string name="error">Virhe</string>
     <string name="hdim_total" translatable="false">%1$s mm</string>
+    <string name="logo">Logo</string>
 </resources>

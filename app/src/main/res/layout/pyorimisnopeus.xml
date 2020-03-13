@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pyorimisnopeus" >
+    android:background="@color/colorPrimaryDark"
+    android:backgroundTint="@color/colorPrimaryDark"
+    tools:context=".Pyorimisnopeus">
 
     <TextView
         android:id="@+id/tulos"
@@ -14,7 +16,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_light"
         android:textAlignment="center"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/halkaisija"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,21 +33,26 @@
         android:layout_marginEnd="99dp"
         android:layout_marginBottom="300dp"
         android:ems="10"
+        android:fontFamily="@font/roboto_light"
         android:hint="@string/drill_diameter"
+        android:importantForAutofill="no"
         android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/laske"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#AE9A64"
+        android:fontFamily="@font/roboto_light"
         android:onClick="laskeNopeus"
         android:text="@string/calc_button"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/halkaisija"
         app:layout_constraintStart_toStartOf="@+id/halkaisija"
         app:layout_constraintTop_toBottomOf="@+id/halkaisija" />
@@ -54,7 +63,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/roboto_light"
         android:text="@string/rpm_button"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
